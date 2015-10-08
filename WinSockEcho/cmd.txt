@@ -1,0 +1,119 @@
+CLIENT 1
+
+Sending 1024 bytes:  return=0, error=0
+ceiving up to 1024 bytes:  return=-1, error=997
+nd completed: 1024 (total 1024)
+nding 1024 bytes:  return=0, error=0
+nd completed: 1024 (total 2048)
+nding 1024 bytes:  return=0, error=0
+ceive completed: 1024 (total 1024)
+ceiving up to 1024 bytes:  return=-1, error=997
+nd completed: 1024 (total 3072)
+nding 1024 bytes:  return=0, error=0
+ceive completed: 1024 (total 2048)
+ceiving up to 1024 bytes:  return=0, error=0
+nd completed: 1024 (total 4096)
+nding 404 bytes:  return=0, error=0
+ceive completed: 1024 (total 3072)
+ceiving up to 1024 bytes:  return=0, error=0
+nd completed: 404 (total 4500)
+ceive completed: 1024 (total 4096)
+ceiving up to 1024 bytes:  return=0, error=0
+ceive completed: 404 (total 4500)
+
+
+****************************************************
+SERVER DA CLIENT 2
+
+Asynchronous TCP echo server listening on port 7
+Event 0 signalled for:  ACCEPT
+Status: new connection accepted (1)
+Event 1 signalled for:  READ
+Status: received 1024 bytes (1)
+Status: sent 1024 bytes immediately (1)
+Event 1 signalled for:  READ
+Status: received 1024 bytes (1)
+Status: sent 1024 bytes immediately (1)
+Event 1 signalled for:  READ
+Status: received 1024 bytes (1)
+Status: sent 1024 bytes immediately (1)
+Event 1 signalled for:  READ
+Status: received 1024 bytes (1)
+Status: sent 1024 bytes immediately (1)
+Event 1 signalled for:  READ
+Status: received 404 bytes (1)
+Status: sent 404 bytes immediately (1)
+Event 1 signalled for:  CLOSE
+Status: connection closed (1)
+Event 0 signalled for:  ACCEPT
+Status: new connection accepted (1)
+Event 1 signalled for:  READ
+Status: received 1024 bytes (1)
+Status: sent 1024 bytes immediately (1)
+Event 1 signalled for:  READ
+Status: received 1024 bytes (1)
+Status: sent 1024 bytes immediately (1)
+Event 1 signalled for:  READ
+Status: received 1024 bytes (1)
+Status: sent 1024 bytes immediately (1)
+Event 1 signalled for:  READ
+Status: received 1024 bytes (1)
+Status: sent 1024 bytes immediately (1)
+Event 1 signalled for:  READ
+Status: received 404 bytes (1)
+Status: sent 404 bytes immediately (1)
+Event 1 signalled for:  CLOSE
+Status: connection closed (1)
+
+
+*****************************************************
+CLIENT 2
+
+Sending 1024 bytes:  return=0, error=0
+Receiving up to 1024 bytes:  return=-1, error=997
+Send completed: 1024 (total 1024)
+Sending 1024 bytes:  return=0, error=0
+Send completed: 1024 (total 2048)
+Sending 1024 bytes:  return=0, error=0
+Send completed: 1024 (total 3072)
+Sending 1024 bytes:  return=0, error=0
+Send completed: 1024 (total 4096)
+Sending 404 bytes:  return=0, error=0
+Receive completed: 1024 (total 1024)
+Receiving up to 1024 bytes:  return=0, error=0
+Receive completed: 1024 (total 2048)
+Receiving up to 1024 bytes:  return=0, error=0
+Receive completed: 1024 (total 3072)
+Receiving up to 1024 bytes:  return=-1, error=997
+Receive completed: 1024 (total 4096)
+Receiving up to 1024 bytes:  return=-1, error=997
+Send completed: 404 (total 4500)
+Receive completed: 404 (total 4500)
+
+
+
+
+*************************************************+
+
+SERVER DA CLIENT 2
+
+Asynchronous TCP echo server listening on port 7
+Event 0 signalled for:  ACCEPT
+Status: new connection accepted (1)
+Event 1 signalled for:  READ
+Status: received 1024 bytes (1)
+Status: sent 1024 bytes immediately (1)
+Event 1 signalled for:  READ
+Status: received 1024 bytes (1)
+Status: sent 1024 bytes immediately (1)
+Event 1 signalled for:  READ
+Status: received 1024 bytes (1)
+Status: sent 1024 bytes immediately (1)
+Event 1 signalled for:  READ
+Status: received 1024 bytes (1)
+Status: sent 1024 bytes immediately (1)
+Event 1 signalled for:  READ
+Status: received 404 bytes (1)
+Status: sent 404 bytes immediately (1)
+Event 1 signalled for:  CLOSE
+Status: connection closed (1)
