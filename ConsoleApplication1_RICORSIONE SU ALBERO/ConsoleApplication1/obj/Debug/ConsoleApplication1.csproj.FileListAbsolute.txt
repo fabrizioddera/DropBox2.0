@@ -17,3 +17,4 @@ C:\Users\Pc\Documents\GitHub\DropBox2.0\ConsoleApplication1_RICORSIONE SU ALBERO
 C:\Users\Pc\Documents\GitHub\DropBox2.0\ConsoleApplication1_RICORSIONE SU ALBERO\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\Pc\Documents\GitHub\DropBox2.0\ConsoleApplication1_RICORSIONE SU ALBERO\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
 C:\Users\Pc\Documents\GitHub\DropBox2.0\ConsoleApplication1_RICORSIONE SU ALBERO\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\ConsoleApplication1_RICORSIONE SU ALBERO\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache

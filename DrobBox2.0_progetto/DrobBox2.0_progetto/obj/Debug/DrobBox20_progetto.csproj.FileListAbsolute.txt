@@ -1,3 +1,19 @@
+<<<<<<< HEAD
 C:\Users\Pc\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\bin\Debug\DrobBox2.0_progetto.exe.config
 C:\Users\Pc\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\DrobBox2.0_progetto.exe
 C:\Users\Pc\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\DrobBox2.0_progetto.pdb
+=======
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\bin\Debug\DrobBox2.0_progetto.exe.config
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\DrobBox2.0_progetto.exe
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\DrobBox2.0_progetto.pdb
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\bin\Debug\DrobBox2.0_progetto.exe
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\bin\Debug\DrobBox2.0_progetto.pdb
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\DrobBox20_progetto.csprojResolveAssemblyReference.cache
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\MainWindow.baml
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\MainWindow.g.cs
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\App.g.cs
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\DrobBox2.0_progetto_MarkupCompile.cache
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\DrobBox2.0_progetto.g.resources
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\DrobBox2._0_progetto.Properties.Resources.resources
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\DrobBox20_progetto.csproj.GenerateResource.Cache
+>>>>>>> origin/master
