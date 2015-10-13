@@ -15,13 +15,9 @@ public class sql
         // mediante SqlConnection con i dati del server
         // al quale si desidera accedere. Il nome del server è BARIBAL,
         // il database che contiente la tabella è master
-<<<<<<< HEAD
-        string source = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Pc\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\dropbox.sql;Integrated Security=True";
 
-        SqlConnection conn = new SqlConnection(source);
-=======
         SqlConnection conn = new SqlConnection("Data Source=FILE_Tree; Integrated Security=SSPI; Initial Catalog=master");
->>>>>>> origin/master
+
         Console.WriteLine("Comando");
         // Ora bisogna creare il comando cmd mediante SqlCommand.
         // In questo caso un semplice SELECT * per prelevare
