@@ -15,7 +15,7 @@ public class sql
         // mediante SqlConnection con i dati del server
         // al quale si desidera accedere. Il nome del server è BARIBAL,
         // il database che contiente la tabella è master
-        SqlConnection conn = new SqlConnection("Data Source=BARIBAL; Integrated Security=SSPI; Initial Catalog=master");
+        SqlConnection conn = new SqlConnection("Data Source=FILE_Tree; Integrated Security=SSPI; Initial Catalog=master");
         Console.WriteLine("Comando");
         // Ora bisogna creare il comando cmd mediante SqlCommand.
         // In questo caso un semplice SELECT * per prelevare
