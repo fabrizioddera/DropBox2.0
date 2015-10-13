@@ -1,0 +1,12 @@
+c:\users\pc\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+c:\users\pc\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+c:\users\pc\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+c:\users\pc\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+c:\users\pc\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+c:\users\pc\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\ConsoleApplication1_PROVE SU FILE\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\ConsoleApplication1_PROVE SU FILE\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\ConsoleApplication1_PROVE SU FILE\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\ConsoleApplication1_PROVE SU FILE\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\ConsoleApplication1_PROVE SU FILE\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\ConsoleApplication1_PROVE SU FILE\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
