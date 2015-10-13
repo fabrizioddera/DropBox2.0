@@ -4,12 +4,20 @@
 winexe
 C#
 .cs
+<<<<<<< HEAD
 C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\server\obj\Debug\
+=======
+C:\Users\Pc\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\server\obj\Debug\
+>>>>>>> origin/master
 server
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\server\App.xaml
+=======
+C:\Users\Pc\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\server\App.xaml
+>>>>>>> origin/master
 11151548125
 
 9-234164688
