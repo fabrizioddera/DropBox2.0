@@ -23,6 +23,7 @@ namespace server
         public MainWindow()
         {
             InitializeComponent();
+
         }
     }
 }

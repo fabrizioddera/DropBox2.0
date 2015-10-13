@@ -1,0 +1,12 @@
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\server\obj\Debug\MainWindow.baml
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\server\obj\Debug\MainWindow.g.cs
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\server\obj\Debug\App.g.cs
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\server\obj\Debug\server_MarkupCompile.cache
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\server\obj\Debug\server.g.resources
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\server\obj\Debug\server.Properties.Resources.resources
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\server\obj\Debug\server.csproj.GenerateResource.Cache
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\server\bin\Debug\server.exe.config
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\server\bin\Debug\server.exe
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\server\bin\Debug\server.pdb
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\server\obj\Debug\server.exe
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\server\obj\Debug\server.pdb
