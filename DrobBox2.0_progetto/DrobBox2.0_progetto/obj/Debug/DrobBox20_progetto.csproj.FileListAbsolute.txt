@@ -1,0 +1,3 @@
+C:\Users\Pc\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\bin\Debug\DrobBox2.0_progetto.exe.config
+C:\Users\Pc\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\DrobBox2.0_progetto.exe
+C:\Users\Pc\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\DrobBox2.0_progetto.pdb

@@ -16,3 +16,5 @@ C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.
 C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\DrobBox2.0_progetto.csproj.GenerateResource.Cache
 C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\DrobBox2.0_progetto.exe
 C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\DrobBox2.0_progetto.pdb
+C:\Users\Pc\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\DrobBox2.0_progetto.exe
+C:\Users\Pc\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\DrobBox2.0_progetto\obj\Debug\DrobBox2.0_progetto.pdb

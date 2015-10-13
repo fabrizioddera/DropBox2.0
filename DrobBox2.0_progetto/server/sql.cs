@@ -15,12 +15,14 @@ public class sql
         // mediante SqlConnection con i dati del server
         // al quale si desidera accedere. Il nome del server è BARIBAL,
         // il database che contiente la tabella è master
-        SqlConnection conn = new SqlConnection("Data Source=BARIBAL; Integrated Security=SSPI; Initial Catalog=master");
+        string source = @"Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Pc\Documents\GitHub\DropBox2.0\DrobBox2.0_progetto\dropbox.sql;Integrated Security=True";
+
+        SqlConnection conn = new SqlConnection(source);
         Console.WriteLine("Comando");
         // Ora bisogna creare il comando cmd mediante SqlCommand.
         // In questo caso un semplice SELECT * per prelevare
         // tutte le colonne dalla tabella
-        SqlCommand cmd = new SqlCommand("SELECT * FROM emp_test", conn);
+        SqlCommand cmd = new SqlCommand("SELECT * FROM dropbox", conn);
         try
         {
             // La connessione era solo impostata, ora la si apre
