@@ -41,10 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="file.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecursiveFileSearch.cs" />
+    <Compile Include="sql.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

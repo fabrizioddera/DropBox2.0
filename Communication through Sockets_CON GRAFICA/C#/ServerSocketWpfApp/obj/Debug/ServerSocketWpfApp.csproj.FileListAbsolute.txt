@@ -50,3 +50,6 @@ C:\Users\Pc\Documents\Visual Studio 2013\Projects\Communication through Sockets_
 C:\Users\Pc\Documents\Visual Studio 2013\Projects\Communication through Sockets_CON GRAFICA\C#\ServerSocketWpfApp\obj\Debug\ServerSocketWpfApp.g.resources
 C:\Users\Pc\Documents\Visual Studio 2013\Projects\Communication through Sockets_CON GRAFICA\C#\ServerSocketWpfApp\obj\Debug\ServerSocketWpfApp.Properties.Resources.resources
 C:\Users\Pc\Documents\Visual Studio 2013\Projects\Communication through Sockets_CON GRAFICA\C#\ServerSocketWpfApp\obj\Debug\ServerSocketWpfApp.csproj.GenerateResource.Cache
+C:\Users\Pc\Documents\GitHub\DropBox2.0\Communication through Sockets_CON GRAFICA\C#\ServerSocketWpfApp\bin\Debug\ServerSocketWpfApp.exe.config
+C:\Users\Pc\Documents\GitHub\DropBox2.0\Communication through Sockets_CON GRAFICA\C#\ServerSocketWpfApp\obj\Debug\ServerSocketWpfApp.exe
+C:\Users\Pc\Documents\GitHub\DropBox2.0\Communication through Sockets_CON GRAFICA\C#\ServerSocketWpfApp\obj\Debug\ServerSocketWpfApp.pdb
