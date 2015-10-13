@@ -7,3 +7,6 @@ C:\Users\Pc\Documents\Visual Studio 2013\Projects\WindowsFormsApplication2\Windo
 C:\Users\Pc\Documents\Visual Studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
 C:\Users\Pc\Documents\Visual Studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
 C:\Users\Pc\Documents\Visual Studio 2013\Projects\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\WindowsFormsApplication2_GRAFICA\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\WindowsFormsApplication2_GRAFICA\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\fabrizioddera\Documents\GitHub\DropBox2.0\WindowsFormsApplication2_GRAFICA\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
