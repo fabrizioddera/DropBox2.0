@@ -1,0 +1,13 @@
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\DrobBox2.0_progetto\client\bin\Debug\DrobBox2.0_progetto.exe.config
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\DrobBox2.0_progetto\client\bin\Debug\DrobBox2.0_progetto.exe
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\DrobBox2.0_progetto\client\bin\Debug\DrobBox2.0_progetto.pdb
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\DrobBox2.0_progetto\client\obj\Debug\client.csprojResolveAssemblyReference.cache
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\DrobBox2.0_progetto\client\obj\Debug\MainWindow.baml
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\DrobBox2.0_progetto\client\obj\Debug\MainWindow.g.cs
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\DrobBox2.0_progetto\client\obj\Debug\App.g.cs
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\DrobBox2.0_progetto\client\obj\Debug\DrobBox2.0_progetto_MarkupCompile.cache
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\DrobBox2.0_progetto\client\obj\Debug\DrobBox2.0_progetto.g.resources
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\DrobBox2.0_progetto\client\obj\Debug\DrobBox2._0_progetto.Properties.Resources.resources
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\DrobBox2.0_progetto\client\obj\Debug\client.csproj.GenerateResource.Cache
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\DrobBox2.0_progetto\client\obj\Debug\DrobBox2.0_progetto.exe
+C:\Users\Pc\Documents\Visual Studio 2013\Projects\DrobBox2.0_progetto\client\obj\Debug\DrobBox2.0_progetto.pdb
