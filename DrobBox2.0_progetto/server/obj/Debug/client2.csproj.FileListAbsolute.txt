@@ -1,3 +1,0 @@
-C:\Users\Pc\Documents\Visual Studio 2013\Projects\DrobBox2.0_progetto\server\bin\Debug\server.exe.config
-C:\Users\Pc\Documents\Visual Studio 2013\Projects\DrobBox2.0_progetto\server\obj\Debug\server.exe
-C:\Users\Pc\Documents\Visual Studio 2013\Projects\DrobBox2.0_progetto\server\obj\Debug\server.pdb
