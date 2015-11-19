@@ -52,8 +52,7 @@ namespace client
                 permission.Demand();
 
                 // Resolves a host name to an IPHostEntry instance            
-                IPHostEntry ipHost = Dns.GetHostEntry("Pc-TOSH");
-
+                //IPHostEntry ipHost = Dns.GetHostEntry("Pc-TOSH");
                 // Gets first IP address associated with a localhost 
                 //IPAddress ipAddr = ipHost.AddressList[1];
                 IPAddress ipAddr = IPAddress.Parse("172.20.95.232");
