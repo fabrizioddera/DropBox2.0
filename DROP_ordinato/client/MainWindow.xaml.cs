@@ -24,246 +24,116 @@ namespace client
     /// </summary>
     public partial class MainWindow : Window
     {
-        SocketPermission permission;
-        Socket sListener;
-        IPEndPoint ipEndPoint;
-        Socket handler;
-
-        private TextBox tbAux = new TextBox();
+        // Receiving byte array  
+        byte[] bytes = new byte[1024];
+        Socket senderSock;
 
         public MainWindow()
         {
             InitializeComponent();
-            tbAux.SelectionChanged += tbAux_SelectionChanged;
 
-            Start_Button.IsEnabled = true;
-            StartListen_Button.IsEnabled = false;
             Send_Button.IsEnabled = false;
-            Close_Button.IsEnabled = false;
+            Disconnect_Button.IsEnabled = false;
         }
 
-        private void tbAux_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-            this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate()
-            {
-                tbMsgReceived.Text = tbAux.Text;
-            }
-            );
-        }
-
-        private void Start_Click(object sender, RoutedEventArgs e)
+        private void Connect_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                // Creates one SocketPermission object for access restrictions
-                permission = new SocketPermission(
-                NetworkAccess.Accept,     // Allowed to accept connections 
-                TransportType.Tcp,        // Defines transport types 
-                "",                       // The IP addresses of local host 
-                SocketPermission.AllPorts // Specifies all ports 
-                );
-
-                // Listening Socket object 
-                sListener = null;
+                // Create one SocketPermission for socket access restrictions 
+                SocketPermission permission = new SocketPermission(
+                    NetworkAccess.Connect,    // Connection permission 
+                    TransportType.Tcp,        // Defines transport types 
+                    "",                       // Gets the IP addresses 
+                    SocketPermission.AllPorts // All ports 
+                    );
 
                 // Ensures the code to have permission to access a Socket 
                 permission.Demand();
 
-                // Resolves a host name to an IPHostEntry instance 
-                IPHostEntry ipHost = Dns.GetHostEntry("");
+                // Resolves a host name to an IPHostEntry instance            
+                IPHostEntry ipHost = Dns.GetHostEntry("Pc-TOSH");
 
                 // Gets first IP address associated with a localhost 
                 //IPAddress ipAddr = ipHost.AddressList[1];
                 IPAddress ipAddr = IPAddress.Parse("172.20.95.232");
 
                 // Creates a network endpoint 
-                ipEndPoint = new IPEndPoint(ipAddr, 4510);
+                IPEndPoint ipEndPoint = new IPEndPoint(ipAddr, 4510);
 
-                // Create one Socket object to listen the incoming connection 
-                sListener = new Socket(
-                    ipAddr.AddressFamily,
-                    SocketType.Stream,
-                    ProtocolType.Tcp
+                // Create one Socket object to setup Tcp connection 
+                senderSock = new Socket(
+                    ipAddr.AddressFamily,// Specifies the addressing scheme 
+                    SocketType.Stream,   // The type of socket  
+                    ProtocolType.Tcp     // Specifies the protocols  
                     );
 
-                // Associates a Socket with a local endpoint 
-                sListener.Bind(ipEndPoint);
+                senderSock.NoDelay = false;   // Using the Nagle algorithm 
 
-                tbStatus.Text = "Server started.";
+                // Establishes a connection to a remote host 
+                senderSock.Connect(ipEndPoint);
+                tbStatus.Text = "Socket connected to " + senderSock.RemoteEndPoint.ToString();
 
-                Start_Button.IsEnabled = false;
-                StartListen_Button.IsEnabled = true;
-            }
-            catch (Exception exc) { MessageBox.Show(exc.ToString()); }
-        }
-
-        private void Listen_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                // Places a Socket in a listening state and specifies the maximum 
-                // Length of the pending connections queue 
-                sListener.Listen(10);
-
-                // Begins an asynchronous operation to accept an attempt 
-                AsyncCallback aCallback = new AsyncCallback(AcceptCallback);
-                sListener.BeginAccept(aCallback, sListener);
-
-                tbStatus.Text = "Server is now listening on " + ipEndPoint.Address + " port: " + ipEndPoint.Port;
-
-                StartListen_Button.IsEnabled = false;
+                Connect_Button.IsEnabled = false;
                 Send_Button.IsEnabled = true;
             }
             catch (Exception exc) { MessageBox.Show(exc.ToString()); }
-        }
 
-        public void AcceptCallback(IAsyncResult ar)
-        {
-            Socket listener = null;
-
-            // A new Socket to handle remote host communication 
-            Socket handler = null;
-            try
-            {
-                // Receiving byte array 
-                byte[] buffer = new byte[1024];
-                // Get Listening Socket object 
-                listener = (Socket)ar.AsyncState;
-                // Create a new socket 
-                handler = listener.EndAccept(ar);
-
-                // Using the Nagle algorithm 
-                handler.NoDelay = false;
-
-                // Creates one object array for passing data 
-                object[] obj = new object[2];
-                obj[0] = buffer;
-                obj[1] = handler;
-
-                // Begins to asynchronously receive data 
-                handler.BeginReceive(
-                    buffer,        // An array of type Byt for received data 
-                    0,             // The zero-based position in the buffer  
-                    buffer.Length, // The number of bytes to receive 
-                    SocketFlags.None,// Specifies send and receive behaviors 
-                    new AsyncCallback(ReceiveCallback),//An AsyncCallback delegate 
-                    obj            // Specifies infomation for receive operation 
-                    );
-
-                // Begins an asynchronous operation to accept an attempt 
-                AsyncCallback aCallback = new AsyncCallback(AcceptCallback);
-                listener.BeginAccept(aCallback, listener);
-            }
-            catch (Exception exc) { MessageBox.Show(exc.ToString()); }
-        }
-
-        public void ReceiveCallback(IAsyncResult ar)
-        {
-            try
-            {
-                // Fetch a user-defined object that contains information 
-                object[] obj = new object[2];
-                obj = (object[])ar.AsyncState;
-
-                // Received byte array 
-                byte[] buffer = (byte[])obj[0];
-
-                // A Socket to handle remote host communication. 
-                handler = (Socket)obj[1];
-
-                // Received message 
-                string content = string.Empty;
-
-
-                // The number of bytes received. 
-                int bytesRead = handler.EndReceive(ar);
-
-                if (bytesRead > 0)
-                {
-                    content += Encoding.Unicode.GetString(buffer, 0,
-                        bytesRead);
-
-                    // If message contains "<Client Quit>", finish receiving
-                    if (content.IndexOf("<Client Quit>") > -1)
-                    {
-                        // Convert byte array to string
-                        string str = content.Substring(0, content.LastIndexOf("<Client Quit>"));
-
-                        //this is used because the UI couldn't be accessed from an external Thread
-                        this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate()
-                        {
-                            tbAux.Text = "Read " + str.Length * 2 + " bytes from client.\n Data: " + str;
-                        }
-                        );
-                    }
-                    else
-                    {
-                        // Continues to asynchronously receive data
-                        byte[] buffernew = new byte[1024];
-                        obj[0] = buffernew;
-                        obj[1] = handler;
-                        handler.BeginReceive(buffernew, 0, buffernew.Length,
-                            SocketFlags.None,
-                            new AsyncCallback(ReceiveCallback), obj);
-                    }
-
-                    this.Dispatcher.BeginInvoke(DispatcherPriority.Normal, (ThreadStart)delegate()
-                    {
-                        tbAux.Text = content;
-                    }
-                    );
-                }
-            }
-            catch (Exception exc) { MessageBox.Show(exc.ToString()); }
         }
 
         private void Send_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                // Convert byte array to string 
-                string str = tbMsgToSend.Text;
+                // Sending message 
+                //<Client Quit> is the sign for end of data 
+                string theMessageToSend = tbMsg.Text;
+                byte[] msg = Encoding.Unicode.GetBytes(theMessageToSend + "<Client Quit>");
 
-                // Prepare the reply message 
-                byte[] byteData =
-                    Encoding.Unicode.GetBytes(str);
+                // Sends data to a connected Socket. 
+                int bytesSend = senderSock.Send(msg);
 
-                // Sends data asynchronously to a connected Socket 
-                handler.BeginSend(byteData, 0, byteData.Length, 0,
-                    new AsyncCallback(SendCallback), handler);
+                ReceiveDataFromServer();
 
                 Send_Button.IsEnabled = false;
-                Close_Button.IsEnabled = true;
+                Disconnect_Button.IsEnabled = true;
             }
             catch (Exception exc) { MessageBox.Show(exc.ToString()); }
         }
 
-        public void SendCallback(IAsyncResult ar)
+        private void ReceiveDataFromServer()
         {
             try
             {
-                // A Socket which has sent the data to remote host 
-                Socket handler = (Socket)ar.AsyncState;
+                // Receives data from a bound Socket. 
+                int bytesRec = senderSock.Receive(bytes);
 
-                // The number of bytes sent to the Socket 
-                int bytesSend = handler.EndSend(ar);
-                Console.WriteLine(
-                    "Sent {0} bytes to Client", bytesSend);
-            }
-            catch (Exception exc) { MessageBox.Show(exc.ToString()); }
-        }
+                // Converts byte array to string 
+                String theMessageToReceive = Encoding.Unicode.GetString(bytes, 0, bytesRec);
 
-        private void Close_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                if (sListener.Connected)
+                // Continues to read the data till data isn't available 
+                while (senderSock.Available > 0)
                 {
-                    sListener.Shutdown(SocketShutdown.Receive);
-                    sListener.Close();
+                    bytesRec = senderSock.Receive(bytes);
+                    theMessageToReceive += Encoding.Unicode.GetString(bytes, 0, bytesRec);
                 }
 
-                Close_Button.IsEnabled = false;
+                tbReceivedMsg.Text = "The server reply: " + theMessageToReceive;
+            }
+            catch (Exception exc) { MessageBox.Show(exc.ToString()); }
+        }
+
+        private void Disconnect_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Disables sends and receives on a Socket. 
+                senderSock.Shutdown(SocketShutdown.Both);
+
+                //Closes the Socket connection and releases all resources 
+                senderSock.Close();
+
+                Disconnect_Button.IsEnabled = false;
             }
             catch (Exception exc) { MessageBox.Show(exc.ToString()); }
         }
