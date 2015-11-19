@@ -1,0 +1,1 @@
+c:\users\pc\documents\visual studio 2013\Projects\DROP_ordinato\server\bin\Debug\server.exe.config
