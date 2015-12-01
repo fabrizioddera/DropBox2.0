@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -16,6 +18,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+
 
 namespace client
 {
@@ -80,14 +83,27 @@ namespace client
 
         }
 
+        JToken GetDirectory(DirectoryInfo directory)
+        {
+            return JToken.FromObject(new
+            {
+                directory = directory.EnumerateDirectories().ToDictionary(x => x.Name, x => GetDirectory(x)),
+                file = directory.EnumerateFiles().Select(x => x.Name).ToList()
+            });
+        }
+
+
         private void Send_Click(object sender, RoutedEventArgs e)
         {
             try
             {
+
+                string value = @"C:\Users\Pc\Desktop\Nuova cartella";
+                var json = GetDirectory(new DirectoryInfo(value));
+
                 // Sending message 
                 //<Client Quit> is the sign for end of data 
-                string theMessageToSend = tbMsg.Text;
-                byte[] msg = Encoding.Unicode.GetBytes(theMessageToSend + "<Client Quit>");
+                byte[] msg = Encoding.Unicode.GetBytes(json + "<Client Quit>");
 
                 // Sends data to a connected Socket. 
                 int bytesSend = senderSock.Send(msg);
