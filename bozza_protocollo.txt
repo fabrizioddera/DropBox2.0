@@ -1,0 +1,64 @@
+		
+		##########				|			##########
+		# SERVER #				|			# CLIENT #
+		##########				|			##########
+								|
+start							|
+creazione json completo_server	|
+listen							|	
+								|	start
+connect						   <->	connect
+								|	creazione json completo_client	
+								<--	SEND json completo_client
+OK / ERR					  -->
+confronto due json, upd?		|	attesa aggiornamenti....
+	0)	null ==> primo avvio	|	
+			creazione db1 e db2	|
+			ADD db1 all files	|
+			ADD db2 all files	|		
+			OK / ERR		  -->		0)	
+	1)	no:	OK / ERR		  -->		1)	
+	2)	si:	SET UPD			  -->		
+								|		2)	a) add: creare file	
+								|			b) rem: rimuovere file			
+								|			c) chg: rimuovere file 
+								|					creare file
+								<--			OK / ERR
+								<--	GREETINGS FINE
+								|
+							___FINE___
+							  SALUTI							
+								|
+								|	modifica parte client
+								<--	SET UPD 
+OK / ERR					  -->
+modifica db						|	attesa aggiornamenti....
+	1) add: ADD db2(act vers)	|
+	2) rem: ADD db1(old vers)	|
+			REM db2(act vers)	|		
+	3) chg: ADD db1(old vers)	|
+			REM db2(act vers)	|
+			ADD db2(act vers)	|	
+UPD FINE		  			  -->	
+								|
+						    ___FINE___ 
+							   UPD						
+								|
+								|	richiesta vecchie vers
+								<--	GET FILE
+OK / ERR					  -->
+ricerca file in db1				|	attesa.....
+	1)	si:	PUT file		  -->		1)	OK / ERR
+	2)	no:	NO / ERR		  -->		2)	
+								<--	OLD FINE
+								|
+							___FINE___
+							 OLD VERS
+__________________________________________________________________				
+
+server	:	SET TIPO nomefile size md5 path date
+			PUT nomefile size md5 path date
+	
+client	:	SET TIPO nomefile size md5 path date
+			GET FILE nomefile vers
+			SEND json
