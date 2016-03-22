@@ -12,7 +12,7 @@ public partial class Form1 : Form
 
     private void sendButton_Click(object sender, EventArgs e)
     {
-        char[] delimiter = m_m_splitter.ToCharArray();
+        char[] delimiter = m_splitter.ToCharArray();
 
         // Show the open file dialog to select our data.
         openFileDialog1.ShowDialog();
