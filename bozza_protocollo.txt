@@ -41,14 +41,15 @@ modifica db						|	attesa aggiornamenti....
 	3) chg: ADD db1(old vers)	|
 			REM db2(act vers)	|
 			ADD db2(act vers)	|	
-UPG / ERR		  			  -->	
+UPG ID FILE / ERR		  	  -->	aggiornare gli ID
 								<--	END
 								|
 _______________________________FINE_______________________________
 							   UPD						
 								|
 								|	richiesta vecchie vers
-								<--	GET FILE
+								<--	1) GET FILE
+									2) GET DATA 
 ( ERR )						  -->
 ricerca file in db1				|	attesa.....
 	1)	si:	PUT file		  -->		
